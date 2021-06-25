@@ -251,7 +251,7 @@ function eventKrpanoLoaded (isWebVr) {
 	if(typeof tourLanguage == "undefined"){
 		tourLanguage = 'ru';
 	}
-	ktools.I18N.getInstance().initLanguage(tourLanguage, crossDomainTargetUrl+'Проект 176 3д тур.data/Проект 176 3д тур._messages_','.xml');
+	ktools.I18N.getInstance().initLanguage(tourLanguage, crossDomainTargetUrl+'src-176data/src-176_messages_','.xml');
 	krpanoLoaded = true;
 	
 	if(isWebVr){
@@ -317,7 +317,7 @@ function eventTourChangeLanguage (pLang) {
 		console.log('change tour language : '+pLang);
 	}
 	
-	ktools.I18N.getInstance().initLanguage(pLang, crossDomainTargetUrl+'Проект 176 3д тур.data/Проект 176 3д тур._messages_','.xml');
+	ktools.I18N.getInstance().initLanguage(pLang, crossDomainTargetUrl+'src-176data/src-176_messages_','.xml');
 }
 
 
@@ -335,8 +335,8 @@ function addKolorFloorPlan(pPlugID, pContent)
 {
 	if(typeof ktools.KolorPluginList.getInstance().getPlugin(pPlugID) == "undefined")
 	{
-		var kolorFloorPlanCSS = new ktools.CssStyle("KolorFloorPlanCSS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorFloorPlan/kolorFloorPlan.css");
-		var kolorFloorPlanJS = new ktools.Script("KolorFloorPlanJS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorFloorPlan/KolorFloorPlan.min.js", [], true);
+		var kolorFloorPlanCSS = new ktools.CssStyle("KolorFloorPlanCSS", crossDomainTargetUrl+"src-176data/graphics/KolorFloorPlan/kolorFloorPlan.css");
+		var kolorFloorPlanJS = new ktools.Script("KolorFloorPlanJS", crossDomainTargetUrl+"src-176data/graphics/KolorFloorPlan/KolorFloorPlan.min.js", [], true);
 		var kolorFloorPlanPlugin = new ktools.KolorPlugin(pPlugID);
 		kolorFloorPlanPlugin.addScript(kolorFloorPlanJS);
 		kolorFloorPlanPlugin.addCss(kolorFloorPlanCSS);
@@ -452,7 +452,7 @@ function showKolorFloorPlan(pPlugID, pContent)
 		kolorFloorPlan.setKrpanoEngine(getKrPanoInstance());
 		
 		//set url for images
-		kolorFloorPlan.setGraphicsUrl(crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/"+pPlugID.toLowerCase()+"/");
+		kolorFloorPlan.setGraphicsUrl(crossDomainTargetUrl+"src-176data/graphics/"+pPlugID.toLowerCase()+"/");
 		
 		//KolorFloorPlan is now ready
 		kolorFloorPlan.setReady(true);
@@ -493,8 +493,8 @@ function addKolorArea(pPlugID)
 {
 	if(typeof ktools.KolorPluginList.getInstance().getPlugin(pPlugID) == "undefined")
 	{
-		var kolorAreaCSS = new ktools.CssStyle("KolorAreaCSS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorArea/kolorArea.css");
-		var kolorAreaJS = new ktools.Script("KolorAreaJS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorArea/KolorArea.min.js", [], true);
+		var kolorAreaCSS = new ktools.CssStyle("KolorAreaCSS", crossDomainTargetUrl+"src-176data/graphics/KolorArea/kolorArea.css");
+		var kolorAreaJS = new ktools.Script("KolorAreaJS", crossDomainTargetUrl+"src-176data/graphics/KolorArea/KolorArea.min.js", [], true);
 		var kolorAreaPlugin = new ktools.KolorPlugin(pPlugID);
 		kolorAreaPlugin.addScript(kolorAreaJS);
 		kolorAreaPlugin.addCss(kolorAreaCSS);
@@ -603,8 +603,8 @@ function addKolorBox(pPlugID)
 {
 	if(typeof ktools.KolorPluginList.getInstance().getPlugin(pPlugID) == "undefined")
 	{
-		var kolorBoxCSS = new ktools.CssStyle("KolorBoxCSS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorBox/kolorBox.css");
-		var kolorBoxJS = new ktools.Script("KolorBoxJS", crossDomainTargetUrl+"Проект 176 3д тур.data/graphics/KolorBox/KolorBox.min.js", [], true);
+		var kolorBoxCSS = new ktools.CssStyle("KolorBoxCSS", crossDomainTargetUrl+"src-176data/graphics/KolorBox/kolorBox.css");
+		var kolorBoxJS = new ktools.Script("KolorBoxJS", crossDomainTargetUrl+"src-176data/graphics/KolorBox/KolorBox.min.js", [], true);
 		var kolorBoxPlugin = new ktools.KolorPlugin(pPlugID);
 		kolorBoxPlugin.addScript(kolorBoxJS);
 		kolorBoxPlugin.addCss(kolorBoxCSS);
